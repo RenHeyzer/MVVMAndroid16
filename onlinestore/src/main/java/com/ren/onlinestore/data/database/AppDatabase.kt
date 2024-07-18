@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.ren.onlinestore.data.database.dao.ProductDao
 import com.ren.onlinestore.data.database.entities.ProductDBO
 
-@Database(entities = [ProductDBO::class], version = 1, exportSchema = false)
+@Database(entities = [ProductDBO::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun productDao(): ProductDao

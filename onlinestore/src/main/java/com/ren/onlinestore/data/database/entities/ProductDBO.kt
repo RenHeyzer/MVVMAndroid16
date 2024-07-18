@@ -13,7 +13,7 @@ data class ProductDBO(
     val description: String,
     val category: String,
     val image: String,
-    val price: Int,
+    val price: Double,
     val firm: String
 )
 

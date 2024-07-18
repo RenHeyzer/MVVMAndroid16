@@ -6,7 +6,7 @@ data class Product(
     val description: String,
     val category: Category,
     val image: String,
-    val price: Int,
+    val price: Double,
     val firm: String,
     val inBasket: Boolean = false
 )
