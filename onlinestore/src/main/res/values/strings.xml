@@ -9,4 +9,11 @@
     <string name="add_product">Добавить товар</string>
     <string name="fab_add_product_content_description">Кнопка для перехода на экран добавления нового товара</string>
     <string name="product_cover_content_description">Обложка продукта</string>
+    <string name="internal_server_error">Произошла ошибка на сервере!</string>
+    <string name="network_connection_error">Нет соединения с интернетом</string>
+    <string name="not_found_error">Не найдено</string>
+    <string name="timeout_error">Время подключения истекло! Проверьте подключение к интернету или попробуйте позже.</string>
+    <string name="unauthorized_error">Вы не авторизованы в системе! Пройдите вход или зарегистрируйтесь в системе.</string>
+    <string name="unexpected_error">Произошла непредвиденная ошибка! Пожалуйста повторите попытку.</string>
+    <string name="unknown_error">Неизвестная ошибка!</string>
 </resources>

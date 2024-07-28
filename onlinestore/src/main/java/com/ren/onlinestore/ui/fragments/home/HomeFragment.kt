@@ -1,13 +1,17 @@
 package com.ren.onlinestore.ui.fragments.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.android.material.snackbar.Snackbar
 import com.ren.onlinestore.databinding.FragmentHomeBinding
 import com.ren.onlinestore.ui.adapters.CatalogAdapter
+import com.ren.onlinestore.utils.UIState
+import com.ren.onlinestore.utils.showSnackbar
 
 class HomeFragment : Fragment() {
 
@@ -27,7 +31,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
-        showProducts()
+        showProducts(view)
     }
 
     private fun setupRecyclerView() {
@@ -36,11 +40,16 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun showProducts() {
-        viewModel.productsState.observe(viewLifecycleOwner) { state ->
-            state?.let {
-                it.success?.let { products ->
-                    catalogAdapter?.submitList(products)
+    private fun showProducts(view: View) {
+        viewModel.productsState.observe(viewLifecycleOwner) { uiState ->
+            uiState?.let {
+                when (it) {
+                    is UIState.Error -> {
+                        Log.e("products", it.error.message)
+                        view.showSnackbar(it.message, Snackbar.LENGTH_INDEFINITE)
+                    }
+                    UIState.Loading -> {}
+                    is UIState.Success -> catalogAdapter?.submitList(it.data)
                 }
             }
         }

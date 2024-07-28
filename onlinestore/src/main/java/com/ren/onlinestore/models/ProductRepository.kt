@@ -1,8 +1,10 @@
 package com.ren.onlinestore.models
 
-import androidx.lifecycle.LiveData
+import com.ren.onlinestore.utils.Result
 
 interface ProductRepository {
 
-    fun getProducts(): LiveData<List<Product>>
+    fun getProducts(
+        onResult: (result: Result<List<Product>>) -> Unit,
+    )
 }
