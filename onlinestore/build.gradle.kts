@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    kotlin("kapt")
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.gms.google.services)
 }
 
 android {
@@ -66,4 +67,7 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor")
 
     implementation(libs.bundles.navigation)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.bundles.firebase)
 }

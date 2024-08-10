@@ -15,5 +15,19 @@
     <string name="timeout_error">Время подключения истекло! Проверьте подключение к интернету или попробуйте позже.</string>
     <string name="unauthorized_error">Вы не авторизованы в системе! Пройдите вход или зарегистрируйтесь в системе.</string>
     <string name="unexpected_error">Произошла непредвиденная ошибка! Пожалуйста повторите попытку.</string>
+    <string name="connect_error_message">Не удалось подключиться к серверу. Пожалуйста, повторите попытку или попробуйте снова позже.</string>
     <string name="unknown_error">Неизвестная ошибка!</string>
+    <string name="username_hint">Имя пользователя</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="confirm_password_hint">Подтвердить пароль</string>
+    <string name="sign_up_text">Зарегистрироваться</string>
+    <string name="already_have_an_account">Уже есть аккаунт?</string>
+    <string name="empty_text_field_error">Заполните поле</string>
+    <string name="passwords_not_equals_text_field_error">Пороли не совпадают</string>
+    <string name="until_resending_confirmation_email">Отправить сообщение с подтвержение повторно можно через: %1$s</string>
+    <string name="confirmation_email_sent">Письмо с подтверждением было отправлено на вашу электронную почту</string>
+    <string name="resend_confirmation_email">Отправить ещё раз</string>
+    <string name="check_is_email_confirmed">Проверить</string>
+    <string name="email_not_confirmed">Электронная почта не подтверждена!</string>
 </resources>

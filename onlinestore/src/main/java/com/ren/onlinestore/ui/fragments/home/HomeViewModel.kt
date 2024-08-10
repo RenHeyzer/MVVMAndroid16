@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import com.ren.onlinestore.data.database.AppDatabase
 import com.ren.onlinestore.data.repositories.ProductDataRepository
 import com.ren.onlinestore.models.Product
-import com.ren.onlinestore.models.ProductRepository
+import com.ren.onlinestore.data.repositories.ProductRepository
 import com.ren.onlinestore.utils.ErrorHandler
 import com.ren.onlinestore.utils.UIState
 import com.ren.onlinestore.utils.handleAsUIState

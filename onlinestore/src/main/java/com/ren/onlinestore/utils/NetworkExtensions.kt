@@ -1,6 +1,7 @@
 package com.ren.onlinestore.utils
 
 import retrofit2.HttpException
+import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
@@ -32,14 +33,17 @@ fun Throwable.asNetworkError() = when (this) {
         }
     }
 
+    is ConnectException -> NetworkError.Connect(this.message ?: "Unknown error!")
+
     is UnknownHostException ->
         NetworkError.NetworkConnection(this.message ?: "Unknown error!")
 
     is SocketTimeoutException ->
         NetworkError.Timeout(this.message ?: "Unknown error!")
 
-    else ->
+    else -> {
         NetworkError.UnExpected(
             this.message ?: "Unknown error!"
         )
+    }
 }
