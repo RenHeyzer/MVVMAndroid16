@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.ExtraSmall" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+    </style>
+
+    <style name="TextAppearance.Small" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="TextAppearance.Medium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="TextAppearance.ExtraMedium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_extra_medium</item>
+    </style>
+
+    <style name="TextAppearance.Large" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextAppearance.ExtraLarge" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="ContentLoadingProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:progressTint">@color/pink</item>
+
+    </style>
+
+    <!--  Material Button style  -->
+    <style name="ThemeOverlay.Material3.Button.Tertiary" parent="ThemeOverlay.Material3.Button">
+        <item name="android:textColor">?android:textColorTertiary</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="backgroundTint">?colorAccent</item>
+    </style>
+
+    <!--  TextInputLayout style  -->
+
+    <style name="Widget.TextInputLayout.OutlineBox.Overlay" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">?colorOnPrimary</item>
+        <item name="boxStrokeErrorColor">?colorError</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Small</item>
+        <item name="errorTextColor">?colorError</item>
+        <item name="hintTextAppearance">@style/TextAppearance.ExtraSmall</item>
+        <item name="cursorColor">?colorOnPrimary</item>
+        <item name="cursorErrorColor">?colorError</item>
+        <item name="hintTextColor">?android:textColorPrimary</item>
+        <item name="android:textColorHint">?android:textColorTertiary</item>
+    </style>
+
+    <!--  TextInputEditText style  -->
+    <style name="Widget.TextInputEditText.Overlay" parent="ThemeOverlay.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColorHighlight">?colorAccent</item>
+    </style>
+</resources>

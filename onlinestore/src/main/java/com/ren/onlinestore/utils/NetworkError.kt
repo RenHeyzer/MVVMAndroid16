@@ -3,6 +3,7 @@ package com.ren.onlinestore.utils
 sealed class NetworkError(override val message: String) : Throwable() {
     data class NetworkConnection(override val message: String) : NetworkError(message)
     data class Timeout(override val message: String) : NetworkError(message)
+    data class Connect(override val message: String) : NetworkError(message)
     data class BadRequest(override val message: String) : NetworkError(message)
     data class UnAuthorized(override val message: String) : NetworkError(message)
     data class InternalServerError(override val message: String) : NetworkError(message)

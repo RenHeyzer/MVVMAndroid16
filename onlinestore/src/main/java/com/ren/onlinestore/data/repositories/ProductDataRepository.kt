@@ -5,7 +5,6 @@ import com.ren.onlinestore.data.network.RetrofitClient
 import com.ren.onlinestore.data.network.models.ProductDTO
 import com.ren.onlinestore.data.network.models.toProduct
 import com.ren.onlinestore.models.Product
-import com.ren.onlinestore.models.ProductRepository
 import com.ren.onlinestore.utils.Result
 import com.ren.onlinestore.utils.asNetworkError
 import retrofit2.Call
