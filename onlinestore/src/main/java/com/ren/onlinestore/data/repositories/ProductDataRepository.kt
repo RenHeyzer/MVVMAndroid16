@@ -1,7 +1,7 @@
 package com.ren.onlinestore.data.repositories
 
 import com.ren.onlinestore.data.database.dao.ProductDao
-import com.ren.onlinestore.data.network.RetrofitClient
+import com.ren.onlinestore.data.network.api.ProductApiService
 import com.ren.onlinestore.data.network.models.ProductDTO
 import com.ren.onlinestore.data.network.models.toProduct
 import com.ren.onlinestore.models.Product
@@ -11,15 +11,17 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.HttpException
 import retrofit2.Response
+import javax.inject.Inject
 
-class ProductDataRepository(
-    private val dao: ProductDao,
+class ProductDataRepository @Inject constructor(
+    private val productApiService: ProductApiService,
+    private val dao: ProductDao
 ) : ProductRepository {
 
     override fun getProducts(
         onResult: (result: Result<List<Product>>) -> Unit,
     ) {
-        RetrofitClient.productApiService.getAllProducts()
+        productApiService.getAllProducts()
             .enqueue(object : Callback<List<ProductDTO>> {
                 override fun onResponse(
                     call: Call<List<ProductDTO>>,

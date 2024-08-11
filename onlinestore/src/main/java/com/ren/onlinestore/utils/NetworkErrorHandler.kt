@@ -3,7 +3,7 @@ package com.ren.onlinestore.utils
 import android.app.Application
 import com.ren.onlinestore.R
 
-class ErrorHandler(private val application: Application) {
+class NetworkErrorHandler(private val application: Application) {
 
     fun handleError(error: NetworkError) = when (error) {
         is NetworkError.BadRequest -> error.message

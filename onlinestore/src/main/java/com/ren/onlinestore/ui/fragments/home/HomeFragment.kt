@@ -10,9 +10,13 @@ import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.ren.onlinestore.databinding.FragmentHomeBinding
 import com.ren.onlinestore.ui.adapters.CatalogAdapter
+import com.ren.onlinestore.utils.NetworkErrorHandler
 import com.ren.onlinestore.utils.UIState
 import com.ren.onlinestore.utils.showSnackbar
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.ren.onlinestore.data.repositories.ProductDataRepository
 import com.ren.onlinestore.databinding.FragmentSignUpBinding
 
 class SignUpFragment : Fragment() {
